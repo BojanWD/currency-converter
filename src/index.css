@@ -11,3 +11,19 @@ body {
   background: linear-gradient(to right, #1446c7, #6187e9);
   margin: 0 15%;
 }
+
+.blue {
+  color: #0077ee;
+}
+
+.blueGray400 {
+  color: #a6bcda;
+}
+
+.blueGray500 {
+  color: #718bae;
+}
+
+.blueGray600 {
+  color: 354665;
+}
