@@ -1,0 +1,11 @@
+.resultContainer {
+  width: 100%;
+  border: 1px solid #718bae;
+  text-align: start;
+  padding: 0.5rem;
+}
+
+.oneUnit {
+  color: #a6bcda;
+  font-size: 0.9rem;
+}

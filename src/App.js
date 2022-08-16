@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "./App.module.css";
 import Loading from "./components/Loading";
+import Result from "./components/Result";
 
 function App() {
   const [amount, setAmount] = useState(1);
@@ -22,7 +23,6 @@ function App() {
       const data = await response.json();
       setCurrencyData(data.conversion_rates);
       setRate(data.conversion_rates[to]);
-
       setLoading(false);
     } catch (error) {
       console.log(error);
@@ -33,6 +33,17 @@ function App() {
   useEffect(() => {
     getCurrencies();
   }, [from]);
+
+  useEffect(() => {
+    setRate(currencyData[to]);
+  }, [to]);
+
+  const switchCurrencies = () => {
+    let tempTo = to;
+    let tempFrom = from;
+    setTo((pS) => tempFrom);
+    setFrom((pS) => tempTo);
+  };
 
   return (
     <main className={styles.main}>
@@ -46,7 +57,12 @@ function App() {
       <section className={styles.contentContainer}>
         <div className={styles.whiteContainer}>
           {loading && <Loading />}
-          {!loading && <></>}
+          {!loading && (
+            <>
+              <h3 className={styles.ccSubtitle}>Convert currencies</h3>
+              <Result from={from} to={to} rate={rate} amount={amount} />
+            </>
+          )}
         </div>
       </section>
       {console.log(currencyData)}

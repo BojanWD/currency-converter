@@ -29,6 +29,12 @@
   border-radius: 15px;
   height: 30rem;
   width: 20rem;
+  padding: 10%;
+  text-align: center;
+}
+
+.ccSubtitle {
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 900px) {
