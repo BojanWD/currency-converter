@@ -1,0 +1,13 @@
+.inputStyle {
+  width: 100%;
+  padding: 0.3rem 1rem;
+  margin: 0.2rem 0;
+  color: #354665;
+  font-size: 0.9rem;
+  border: 1px solid #718bae;
+  border-radius: 3px;
+}
+
+.inputStyle:focus {
+  outline: 1px solid #354665;
+}

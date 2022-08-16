@@ -2,7 +2,9 @@
   width: 100%;
   border: 1px solid #718bae;
   text-align: start;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
+  overflow: hidden;
+  overflow-wrap: break-word;
 }
 
 .oneUnit {

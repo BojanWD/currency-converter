@@ -30,11 +30,12 @@
   height: 30rem;
   width: 20rem;
   padding: 10%;
-  text-align: center;
 }
 
 .ccSubtitle {
   font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 @media screen and (max-width: 900px) {

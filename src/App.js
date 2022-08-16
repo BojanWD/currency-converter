@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "./App.module.css";
+import Amount from "./components/Amount";
 import Loading from "./components/Loading";
 import Result from "./components/Result";
 
@@ -45,6 +46,10 @@ function App() {
     setFrom((pS) => tempTo);
   };
 
+  const changeAmount = (value) => {
+    setAmount(value);
+  };
+
   return (
     <main className={styles.main}>
       <section className={styles.contentContainer}>
@@ -60,6 +65,9 @@ function App() {
           {!loading && (
             <>
               <h3 className={styles.ccSubtitle}>Convert currencies</h3>
+              <Amount amount={amount} changeAmount={changeAmount} />
+              <p>From</p>
+              <p>To</p>
               <Result from={from} to={to} rate={rate} amount={amount} />
             </>
           )}

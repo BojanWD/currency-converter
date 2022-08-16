@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Result.module.css";
+import styles from "../css/Result.module.css";
 
 function Result({ from, to, amount, rate }) {
   return (
