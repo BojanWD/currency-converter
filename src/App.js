@@ -16,7 +16,7 @@ function App() {
   const [to, setTo] = useState("RSD");
 
   //API key
-  const apiKey = "0941a3eb6f37325639f22249";
+  const apiKey = "exchangerate-api-key"; //not a real API key, use own to test application
 
   const getCurrencies = async () => {
     const apiUrl = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${from}`;
