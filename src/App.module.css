@@ -27,7 +27,7 @@
   background-color: white;
   color: #354665;
   border-radius: 15px;
-  height: 30rem;
+  height: 31rem;
   width: 20rem;
   padding: 10%;
 }
@@ -38,9 +38,35 @@
   margin-bottom: 0.5rem;
 }
 
+.switchButtonContainer {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.switchButton {
+  border-radius: 15px;
+  padding: 0.3rem 0.5rem;
+  background-color: #0077ee;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.switchButton:hover {
+  background-color: #006bd6;
+}
+
 @media screen and (max-width: 900px) {
   .main {
     flex-direction: column;
+  }
+
+  .whiteContainer {
+    height: 510px;
+    width: 320px;
+    padding: 2rem;
   }
 
   .mainTitle {
@@ -62,7 +88,7 @@
   .whiteContainer {
     background-color: white;
     border-radius: 15px;
-    height: 24rem;
+    height: 33rem;
     width: 16rem;
   }
 

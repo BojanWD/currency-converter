@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import styles from "./App.module.css";
 import Amount from "./components/Amount";
+import ChooseCurrency from "./components/ChooseCurrency";
 import Loading from "./components/Loading";
 import Result from "./components/Result";
+import currencies from "./data/currencies";
 
 function App() {
   const [amount, setAmount] = useState(1);
@@ -39,7 +41,7 @@ function App() {
     setRate(currencyData[to]);
   }, [to]);
 
-  const switchCurrencies = () => {
+  const handleSwitchCurrencies = () => {
     let tempTo = to;
     let tempFrom = from;
     setTo((pS) => tempFrom);
@@ -48,6 +50,14 @@ function App() {
 
   const changeAmount = (value) => {
     setAmount(value);
+  };
+
+  const changeToCurrency = (value) => {
+    setTo(value);
+  };
+
+  const changeFromCurrency = (value) => {
+    setFrom(value);
   };
 
   return (
@@ -65,15 +75,36 @@ function App() {
           {!loading && (
             <>
               <h3 className={styles.ccSubtitle}>Convert currencies</h3>
+
               <Amount amount={amount} changeAmount={changeAmount} />
-              <p>From</p>
-              <p>To</p>
+              <ChooseCurrency
+                type={"from"}
+                currency={from}
+                changeCurrency={changeFromCurrency}
+                currencies={currencies}
+              />
+
+              <div className={styles.switchButtonContainer}>
+                <button
+                  onClick={handleSwitchCurrencies}
+                  className={styles.switchButton}
+                >
+                  Switch Currencies
+                </button>
+              </div>
+
+              <ChooseCurrency
+                type={"to"}
+                currency={to}
+                changeCurrency={changeToCurrency}
+                currencies={currencies}
+              />
               <Result from={from} to={to} rate={rate} amount={amount} />
             </>
           )}
         </div>
       </section>
-      {console.log(currencyData)}
+      {/* {console.log(currencyData)} */}
     </main>
   );
 }

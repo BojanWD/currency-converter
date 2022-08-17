@@ -3,7 +3,9 @@ import styles from "../css/Inputs.module.css";
 
 function Amount({ amount, changeAmount }) {
   const handleInputChange = (e) => {
-    if (isNaN(parseFloat(e.target.value.replaceAll(",", "")))) {
+    console.log(e.target.value);
+
+    if (isNaN(e.target.value.replaceAll(",", ""))) {
       return;
     }
     if (parseFloat(e.target.value) < 0 || e.target.value === "") {
@@ -20,7 +22,7 @@ function Amount({ amount, changeAmount }) {
   };
 
   return (
-    <div>
+    <div className={styles.inputDiv}>
       <label htmlFor="amount">Amount</label>
       <input
         className={styles.inputStyle}
@@ -29,6 +31,7 @@ function Amount({ amount, changeAmount }) {
         name="amount"
         value={amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
       />
+      {console.log(amount)}
     </div>
   );
 }

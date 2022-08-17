@@ -27,3 +27,7 @@ body {
 .blueGray600 {
   color: #354665;
 }
+
+label {
+  text-transform: capitalize;
+}

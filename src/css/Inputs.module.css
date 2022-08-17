@@ -11,3 +11,31 @@
 .inputStyle:focus {
   outline: 1px solid #354665;
 }
+
+.inputDiv {
+  margin-top: 1rem;
+  position: relative;
+}
+
+.searchOptions {
+  position: absolute;
+  width: 100%;
+  max-height: 11rem;
+  border: 1px solid #354665;
+  border-radius: 3px;
+  background-color: white;
+  overflow: hidden;
+  z-index: 100;
+
+  font-size: 0.9rem;
+}
+
+.searchItem {
+  padding: 0.1rem 1rem;
+}
+
+.searchItem:hover {
+  cursor: pointer;
+  background-color: #718bae;
+  color: white;
+}
