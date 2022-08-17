@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+## How I worked on this project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My goal was to create a currency converter app using real data from an API
+
+- I built this app based on Figma designs: https://prnt.sc/uDt9gMlUFjau
+- Exchangerate API was used as it is free and provides conversion rates for more than 160 currencies
+
+## Project characteristics
+
+- State(s) in project was handled using useState hook as it is a simple app so there was no need for useContext or external state management library.
+- Project is fully responsive and has different layouts for big, small and ultra-small screens.
 
 ## Available Scripts
 
