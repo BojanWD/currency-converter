@@ -44,8 +44,8 @@
 }
 
 .switchButton {
-  border-radius: 15px;
-  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  padding: 0.6rem;
   background-color: #0077ee;
   border: none;
   cursor: pointer;

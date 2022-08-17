@@ -8,7 +8,7 @@ My goal was to create a currency converter app using real data from an API
 ## Project characteristics
 
 - State(s) in project was handled using useState hook as it is a simple app so there was no need for useContext or external state management library.
-- Project is fully responsive and has different layouts for big, small and ultra-small screens.
+- Project is fully responsive and has different layouts for big, small and ultra-small screens. CSS was implemented using CSS modules.
 
 ## Available Scripts
 
