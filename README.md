@@ -3,12 +3,13 @@
 My goal was to create a currency converter app using real data from an API
 
 - I built this app based on Figma designs: https://prnt.sc/uDt9gMlUFjau
-- Exchangerate API was used as it is free and provides conversion rates for more than 160 currencies
+- Exchangerate API was used as it is free and provides conversion rates for more than 160 currencies.
 
 ## Project characteristics
 
 - State(s) in project was handled using useState hook as it is a simple app so there was no need for useContext or external state management library.
 - Project is fully responsive and has different layouts for big, small and ultra-small screens. CSS was implemented using CSS modules.
+- The application fetches data from the exchangerate API. Example of the API call: https://github.com/BojanWD/currency-converter/blob/main/src/App.js from line 21.
 
 ## Available Scripts
 
